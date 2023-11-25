@@ -12,11 +12,8 @@ rmqPath,
   rmqPass ::
     Text
 rmqHost = "localhost"
-
 rmqPath = "/"
-
 rmqUser = "rabbit"
-
 rmqPass = "rabbit"
 
 topicExchangeType :: Text
