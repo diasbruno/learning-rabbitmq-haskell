@@ -17,7 +17,7 @@ common warnings
 
 executable producer-t
     import:           warnings
-    main-is:          Main.hs
+    main-is:          Producer.hs
     -- other-modules:
     -- other-extensions:
     build-depends:    base ^>=4.16.4.0
