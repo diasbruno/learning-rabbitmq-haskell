@@ -2,7 +2,7 @@
 module Main where
 
 import Control.Monad (void, (>=>))
-import MyLib (initChannel, withConnection, localExchangeName, localTopicName)
+import Sdk (initChannel, withConnection, localExchangeName, localTopicName)
 import Network.AMQP (Message(msgBody, msgDeliveryMode), DeliveryMode (NonPersistent), newMsg, publishMsg, Channel)
 import qualified Data.ByteString.Lazy.Char8 as BL
 

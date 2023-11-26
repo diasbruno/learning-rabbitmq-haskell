@@ -4,7 +4,7 @@ module Main where
 
 import Control.Monad (void)
 import qualified Data.ByteString.Lazy.Char8 as BL
-import MyLib (initChannel, localQueueName, withConnection)
+import Sdk (initChannel, localQueueName, withConnection)
 import Network.AMQP (Ack (Ack), Envelope, Message (msgBody), consumeMsgs, ackEnv)
 
 myCallback :: (Message, Envelope) -> IO ()

@@ -1,6 +1,6 @@
 {-# LANGUAGE OverloadedStrings #-}
 
-module MyLib where
+module Sdk where
 
 import Control.Monad (void)
 import Data.Text (Text)
