@@ -17,13 +17,15 @@ common warnings
 
 library
     import:           warnings
-    exposed-modules:  Sdk
+    exposed-modules:  Sdk, Types
     -- other-modules:
     -- other-extensions:
     build-depends:    base ^>=4.16.4.0
                     , bytestring
                     , text
                     , amqp
+                    , persistent
+                    , persistent-template
     hs-source-dirs:   src
     default-language: Haskell2010
 
@@ -35,6 +37,7 @@ test-suite sdk-test
     type:             exitcode-stdio-1.0
     hs-source-dirs:   test
     main-is:          Main.hs
-    build-depends:
-        base ^>=4.16.4.0,
-        sdk
+    build-depends: base ^>=4.16.4.0
+                 , monad-logger
+                 , mtl
+                 , sdk
