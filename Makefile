@@ -4,24 +4,15 @@ PROGRAMS=producer consumer sdk
 
 .DEFAULT_GOAL:=all
 
-_build:
-	cabal v2-build $(TARGET)
-
-_run:
-	cabal v2-run $(TARGET)
-
-_repl:
-	cabal v2-repl $(TARGET)
-
-define program_rules
+define program_rules :=
 build_$(1):
-	TARGET=$(1) make -k _build
+	cabal v2-build $(1)
 
 run_$(1):
-	TARGET=$(1) make -k _run
+	cabal v2-run $(1)
 
 repl_$(1):
-	TARGET=$(1) make -k _repl
+	cabal v2-repl $(1)
 
 .PHONY: build_$(1) run_$(1) repl_$(1)
 endef
